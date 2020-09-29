@@ -36,6 +36,22 @@ const limitRecipeTitle = (title, limit = 17) => {
     return title;
 }
 
+
+/*
+// alternate solution for limitRecipeTitle function
+const limitRecipeTitle = ( title, limit = 17 ) => {
+    let shortenedTitle = title
+ 
+    if( title.length > limit )
+    {
+        const index = title.substring( 0, limit ).lastIndexOf( ' ' );
+        shortenedTitle = title.substring( 0, index );
+    }
+ 
+    return shortenedTitle;
+};
+*/
+
 const renderRecipe = recipe => {
     const markup = `
                 <li>
