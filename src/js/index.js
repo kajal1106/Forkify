@@ -38,6 +38,10 @@ elements.searchForm.addEventListener('submit', e => {
     controlSearch();
 });
 
+elements.searchResPages.addEventListener('click', e => {
+    console.log(e.target);
+});
+
 const search = new Search('pizza');
 console.log(search);
 search.getResults();
