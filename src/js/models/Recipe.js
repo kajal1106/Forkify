@@ -45,6 +45,17 @@ export default class Recipe{
             ingredient = ingredient.replace(/ *\([^)]*\) */g, ' ');
 
             // 3. Parse ingredients into count, unit and ingredients
+            const arrIng = ingredient.split(' ');
+            const unitIndex = arrIng.findIndex(el2 => unitsShort.includes(el2));
+
+            if(unitIndex > -1){
+                // There is a unit
+            } else if(parseInt(arrIng[0], 10)){
+                // There is NO unit but 1st element is number
+            }else if (unitIndex === -1){
+                // There is NO unit
+            }
+
             return ingredient;
         });
         this.ingredients = newIngredients;
