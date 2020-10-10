@@ -53,7 +53,7 @@ export default class Recipe{
             } else if(parseInt(arrIng[0], 10)){
                 // There is NO unit but 1st element is number
             }else if (unitIndex === -1){
-                // There is NO unit
+                // There is NO unit and NO number in 1st position
             }
 
             return ingredient;
