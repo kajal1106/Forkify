@@ -1,6 +1,7 @@
 import Search from './models/Search';
 import Recipe from './models/Recipe';
 import * as searchView from './views/searchView';
+import * as recipeView from './views/recipeView';
 import { elements, renderLoader, clearLoader } from './views/base';
 
 /** Global state of the app
@@ -68,7 +69,7 @@ search.getResults();
      // Get ID from URL
     const id = window.location.hash.replace('#', '');
     console.log(id);
-    
+
     if (id){
         // Prepare UI for changes
 
