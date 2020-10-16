@@ -68,7 +68,7 @@ search.getResults();
      // Get ID from URL
     const id = window.location.hash.replace('#', '');
     console.log(id);
-
+    
     if (id){
         // Prepare UI for changes
 
