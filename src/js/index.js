@@ -72,6 +72,8 @@ search.getResults();
 
     if (id){
         // Prepare UI for changes
+        recipeView.clearRecipe();
+        renderLoader(elements.recipe);
 
         // Create new recipe object
         state.recipe = new Recipe(id);
@@ -79,6 +81,7 @@ search.getResults();
         try{
         // Get recipe data and parse ingredients
         await state.recipe.getRecipe();
+        console.log(state.recipe.ingredients);
         state.recipe.parseIngredients();
 
         // Calculate servings and time
@@ -86,7 +89,10 @@ search.getResults();
         state.recipe.calServings();
 
         // Render recipe
-        console.log(state.recipe);
+        // console.log(state.recipe);
+        clearLoader();
+        recipeView.renderRecipe(state.recipe);
+
     }catch(err){
         alert('Error while processing recipe!');
         }
