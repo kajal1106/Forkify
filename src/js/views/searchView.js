@@ -13,6 +13,9 @@ export const clearResults = () => {
     elements.searchResPages.innerHTML = '';
 };
 
+export const highlightedSelected = id =>{
+    document.querySelector(`a[href*="#${id}"]`).classList.add('results__link--active');
+}
 /*
 // 'pasta with tomato and spinach'
 acc: 0 / acc + cur.length =5 / newTitle = ['Pasta']
