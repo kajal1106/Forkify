@@ -85,7 +85,7 @@ search.getResults();
         try{
         // Get recipe data and parse ingredients
         await state.recipe.getRecipe();
-        console.log(state.recipe.ingredients);
+        // console.log(state.recipe.ingredients);
         state.recipe.parseIngredients();
 
         // Calculate servings and time
